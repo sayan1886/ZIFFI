@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZCSearchHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" text="Hair Spa" placeholder="Search Text" translatesAutoresizingMaskIntoConstraints="NO" id="NBs-MU-Q6d">
+                    <rect key="frame" x="5" y="5" width="590" height="44"/>
+                    <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <textInputTraits key="textInputTraits" keyboardType="webSearch" keyboardAppearance="light" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="a3m-Q1-j8j"/>
+                    </connections>
+                </searchBar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="NBs-MU-Q6d" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="jUc-vH-IQ6"/>
+                <constraint firstItem="NBs-MU-Q6d" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="stz-tg-BHv"/>
+                <constraint firstAttribute="trailing" secondItem="NBs-MU-Q6d" secondAttribute="trailing" constant="5" id="tyO-eK-wl4"/>
+                <constraint firstAttribute="bottom" secondItem="NBs-MU-Q6d" secondAttribute="bottom" constant="5" id="uVf-mQ-LtI"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="searchBar" destination="NBs-MU-Q6d" id="0dl-oZ-xep"/>
+            </connections>
+        </view>
+    </objects>
+</document>

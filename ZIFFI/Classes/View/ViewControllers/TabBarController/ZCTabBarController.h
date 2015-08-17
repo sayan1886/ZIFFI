@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ZCTabBarController.h
 //  ZIFFI
 //
 //  Created by Sayan Chatterjee on 17/08/15.
@@ -8,10 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface ZCTabBarController : UITabBarController
 
 
 @end
-

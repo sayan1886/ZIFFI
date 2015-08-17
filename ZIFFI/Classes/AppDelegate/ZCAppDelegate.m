@@ -1,18 +1,18 @@
 //
-//  AppDelegate.m
+//  ZCAppDelegate.m
 //  ZIFFI
 //
 //  Created by Sayan Chatterjee on 17/08/15.
 //  Copyright (c) 2015 ZIFFI.COM. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "ZCAppDelegate.h"
 
-@interface AppDelegate ()
+@interface ZCAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation ZCAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
