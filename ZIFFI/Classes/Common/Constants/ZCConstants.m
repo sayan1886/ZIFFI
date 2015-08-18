@@ -29,5 +29,6 @@ NSString *BOOKINGS_VIEW_CONTROLLER_NAVIGATION_TITLE = @"Bookings";
 NSString *REFFER_VIEW_CONTROLLER_NAVIGATION_TITLE = @"Reffer";
 NSString *MORE_VIEW_CONTROLLER_NAVIGATION_TITLE = @"More";
 
-
+NSString *ZIFFY_BASE_URL = @"http://www.ziffi.com/";
+NSString *SEARCH_URL_PATH = @"api/search";
 

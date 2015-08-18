@@ -34,7 +34,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ZCLog(@"%ld", indexPath.row);
     ZCSearchCellType cellType = indexPath.row ;
     ZCSearchTableViewCell *searchTableViewCell = [tableView dequeueReusableCellWithIdentifier:[ZCSearchTableViewCell identifierForCellType:cellType]];
     if (!searchTableViewCell){

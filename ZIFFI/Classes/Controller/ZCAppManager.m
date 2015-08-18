@@ -8,6 +8,7 @@
 
 #import "ZCAppManager.h"
 #import "AFNetworking.h"
+#import "ZCSearchResultModel.h"
 
 @implementation ZCAppManager
 
@@ -22,4 +23,10 @@
     }
     return self;
 }
+
+
+- (void) searchZiffyWithParameter:(NSDictionary *) parameter {
+    
+}
+
 @end
