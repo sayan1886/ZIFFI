@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^ZCAppManagerCompletionHandler)  (id handler);
+
 @interface ZCAppManager : NSObject
 + (instancetype) sharedAppManager;
+- (void) searchInZiffiWithSearchPhrase:(NSString *)searchPhrase withCompletionHandler:(ZCAppManagerCompletionHandler)handler;
 @end

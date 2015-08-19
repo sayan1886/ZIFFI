@@ -6,10 +6,13 @@
 //  Copyright (c) 2015 ZIFFI.COM. All rights reserved.
 //
 
-#import "JSONModel.h"
+#import "ZCJSONModel.h"
 #import "ZCSearchMetaModel.h"
 #import "ZCSearchCategoryModel.h"
 
-@interface ZCSearchResultModel : JSONModel
 
+@interface ZCSearchResultModel : ZCJSONModel<ZCSearchCategoryModel, NSCoding>
+@property (nonatomic, strong) ZCSearchMetaModel *meta;
+@property (nonatomic, strong) NSArray<ZCSearchCategoryModel> *results;
+@property (nonatomic, strong) NSArray<Optional> *errors;
 @end

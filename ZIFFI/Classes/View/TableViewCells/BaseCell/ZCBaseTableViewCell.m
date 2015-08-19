@@ -43,8 +43,12 @@
     ZCLog(@"Need to Implemented by Child Classes");
 }
 
-- (void) updateCellUI{
-     ZCLog(@"Need to Implemented by Child Classes");
+- (void) configureHeaderWithModel:(id)object{
+    ZCLog(@"Need to Implemented by Child Classes");
+}
+
+- (void) configureFooterWithModel:(id)object{
+    ZCLog(@"Need to Implemented by Child Classes");
 }
 
 @end

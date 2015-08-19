@@ -11,5 +11,6 @@
 @interface ZCBaseTableViewCell : UITableViewCell
 - (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 - (void) configureCellWithModel:(id) object;
-- (void) updateCellUI;
+- (void) configureHeaderWithModel:(id)object;
+- (void) configureFooterWithModel:(id)object;
 @end

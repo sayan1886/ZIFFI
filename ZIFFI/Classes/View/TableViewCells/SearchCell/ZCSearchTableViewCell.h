@@ -9,8 +9,8 @@
 #import "ZCBaseTableViewCell.h"
 
 typedef NS_ENUM(NSInteger, ZCSearchCellType){
-    ZCSearchCellTypeResult = 0,
-    ZCSearchCellTypeLoadMore = 1
+    ZCSearchCellTypeUnknown = 0,
+    ZCSearchCellTypeResult = 100,
 };
 
 @interface ZCSearchTableViewCell : ZCBaseTableViewCell
