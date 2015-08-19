@@ -8,6 +8,7 @@
 
 #import "ZCBaseViewController.h"
 #import "ZCSearchTableViewCell.h"
+#import "ZCLoadMoreCellView.h"
 
 @class ZCHomeViewController;
 @class ZCSearchTableViewCell;
@@ -32,9 +33,10 @@
 
 @end
 
-@interface ZCHomeViewController : ZCBaseViewController
+@interface ZCHomeViewController : ZCBaseViewController<ZCLoadMoreCellDelegate>
 
 @property (nonatomic, assign) id<ZCSearchViewControllerDataSource> datasource;
+@property (weak, nonatomic, readonly)UITableView *searchResultView;
 
 @end
 

@@ -9,10 +9,11 @@
 
 #import "ZCConstants.h"
 
-NSString  *APPLICATION_FONT = @"Helvetica Neue";
-NSString  *APPLICATION_FONT_BOLD = @"Helvetica Neue Bold";
+NSString  *APPLICATION_FONT = @"HelveticaNeue";
+NSString  *APPLICATION_FONT_BOLD = @"HelveticaNeue-Bold ";
 CGFloat NAV_BAR_TITLE_FONT_SIZE = 21.0f;
 CGFloat TAB_BAR_TITLE_FONT_SIZE = 13.0f;
+CGFloat APPLICATION_BODY_FONT_FONT_SIZE = 17.0f;
 
 UIColor *COLOR_WITH_RED_GREEN_BLUE_APLPHA(CGFloat RED, CGFloat GREEN, CGFloat BLUE, CGFloat ALPHA){
     return [UIColor colorWithRed:RED green:GREEN blue:BLUE alpha:ALPHA];
@@ -34,3 +35,4 @@ NSString *SEARCH_URL_PATH = @"api/search";
 
 
 NSString *SEARCH_LOADING_MESSAGE = @"__SEARCH_LOADING_MESSAGE__";
+NSString *SEARCH_LOADING_PAYLOAD = @"__SEARCH_LOADING_PAYLOAD__";

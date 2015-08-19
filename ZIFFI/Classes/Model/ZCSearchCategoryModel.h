@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 ZIFFI.COM. All rights reserved.
 //
 
-#import "ZCJSONModel.h"
+#import "JSONModel.h"
 
 /**
  **Sample Category Model
@@ -43,7 +43,8 @@
 
 @end
 
-@interface ZCSearchCategoryModel : ZCJSONModel
+@interface ZCSearchCategoryModel : JSONModel
+@property (nonatomic, strong) NSString *id;
 @property (nonatomic, strong) NSString *rank;
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSNumber *rating;

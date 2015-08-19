@@ -11,6 +11,7 @@
 @class ZCRatingView;
 
 @protocol ZCRatingViewDelegate
+@optional
 - (void)rateView:(ZCRatingView *)rateView ratingDidChange:(CGFloat)rating;
 @end
 

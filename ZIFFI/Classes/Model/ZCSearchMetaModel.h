@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 ZIFFI.COM. All rights reserved.
 //
 
-#import "ZCJSONModel.h"
+#import "JSONModel.h"
 
 /**
  **Sample Meta Model
@@ -25,7 +25,7 @@
  "page": 1
  */
 
-@interface ZCSearchMetaModel : ZCJSONModel
+@interface ZCSearchMetaModel : JSONModel
 @property (nonatomic, strong) NSNumber *results_per_page;
 @property (nonatomic, strong) NSNumber *page;
 @property (nonatomic, strong) NSNumber *total_results;

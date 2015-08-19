@@ -15,7 +15,7 @@
 @property (nonatomic, strong) NSURL *requestURL;
 @property (nonatomic, assign) NSInteger lastResponseStatusCode;
 @property (nonatomic, strong) id lastResponseObject;
-@property (nonatomic, strong) NSError *error;
+@property (nonatomic, strong) NSError *lastError;
 @end
 
 @implementation ZCNetworkManager
@@ -37,7 +37,15 @@
     self.requestURL = [NSURL URLWithString:requestURLString];
 }
 
+- (void) resetCache{
+    self.lastError = nil;
+    self.lastResponseObject = nil;
+    self.lastResponseStatusCode = NSIntegerMax;
+    self.requestURL = nil;
+}
+
 - (void) GETfromPath:(NSString *)queryPath withParameters:(NSDictionary *)params success:(ZCNetworkManagerSuccessBlock)success failure:(ZCNetworkManagerFailureBlock) failure{
+    [self resetCache];
     [self createRequestURLFromBaseURLString:ZIFFY_BASE_URL andQueryPath:queryPath];
     __weak typeof(self) weakSelf = self;
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -48,16 +56,18 @@
         weakSelf.lastResponseStatusCode = operation.response.statusCode;
         success(response);
     } failure:^(AFHTTPRequestOperation * operation, NSError * error) {
-        weakSelf.error = error;
+        weakSelf.lastError = error;
         weakSelf.lastResponseObject = operation.response;
         weakSelf.lastResponseStatusCode = operation.response.statusCode;
-        failure([NSString stringWithFormat:@"Operation failed with Status Code : @%ld", self.lastResponseStatusCode ], error);
+        failure([NSString stringWithFormat:@"Operation failed with Status Code : %ld", (long)self.lastResponseStatusCode ], error);
     }];
 }
 
 - (void) POSTtoPath:(NSString *)queryPath withParameters:(NSDictionary *)params success:(ZCNetworkManagerSuccessBlock)success failure:(ZCNetworkManagerFailureBlock) failure {
+    [self resetCache];
     [self createRequestURLFromBaseURLString:ZIFFY_BASE_URL andQueryPath:queryPath];
     __weak typeof(self) weakSelf = self;
+    self.lastError = nil;
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager.requestSerializer setTimeoutInterval:REQUEST_TIMEOUT_THRESOLD];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -66,10 +76,10 @@
         weakSelf.lastResponseStatusCode = operation.response.statusCode;
         success(response);
     } failure:^(AFHTTPRequestOperation * operation, NSError * error) {
-        weakSelf.error = error;
+        weakSelf.lastError = error;
         weakSelf.lastResponseObject = operation.response;
         weakSelf.lastResponseStatusCode = operation.response.statusCode;
-        failure([NSString stringWithFormat:@"Operation failed with Status Code : @%ld", self.lastResponseStatusCode ], error);
+        failure([NSString stringWithFormat:@"Operation failed with Status Code : %ld", (long)self.lastResponseStatusCode ], error);
     }];
 }
 

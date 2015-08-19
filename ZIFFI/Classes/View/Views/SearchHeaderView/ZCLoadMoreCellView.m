@@ -9,6 +9,8 @@
 #import "ZCLoadMoreCellView.h"
 
 @interface ZCLoadMoreCellView ()
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loader;
+@property (weak, nonatomic) IBOutlet UIButton *retryButton;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 @end
 
@@ -19,16 +21,16 @@
 }
 
 
-- (void) setLoaderMessage:(NSString *)loaderMessage{
-    if (_loaderMessage != loaderMessage) {
-        _loaderMessage = [[NSString alloc] initWithString:loaderMessage];
-        self.messageLabel.text = _loaderMessage;
-    }
-}
-
 - (void) confiureHeaderWithModel:(id)object{
     NSDictionary *model = (NSDictionary *)object;
+    [[self loader] startAnimating];
     self.messageLabel.text = [model objectForKey:SEARCH_LOADING_MESSAGE];
+    [self.messageLabel sizeToFit];
+    [self.messageLabel layoutIfNeeded];
+    if ([[model objectForKey:SEARCH_LOADING_PAYLOAD] isKindOfClass:[NSError class]]) {
+        [self.loader stopAnimating];
+        [self.retryButton setHidden:NO];
+    }
 }
 
 + (CGFloat) heightForHeaderView{
@@ -37,6 +39,17 @@
 
 + (CGFloat) heightForFooterView{
     return 0.0f;
+}
+
+#pragma mark - UIActions
+
+- (IBAction)retrySearch:(id)sender {
+    if (self.delegate) {
+        if ([self.delegate respondsToSelector:@selector(loadMoreCellView:didPressRetrySearch:)]) {
+            [self.delegate loadMoreCellView:self didPressRetrySearch:sender];
+            [self.retryButton setHidden:YES];
+        }
+    }
 }
 
 @end

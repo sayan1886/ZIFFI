@@ -42,7 +42,7 @@
     CGFloat height = 0.0;
     switch (cellType) {
         case ZCSearchCellTypeResult:
-            height = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ? 150.0f : 350.0f;
+            height = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ? 300.0f : 400.0f;
             break;
         default:
             break;

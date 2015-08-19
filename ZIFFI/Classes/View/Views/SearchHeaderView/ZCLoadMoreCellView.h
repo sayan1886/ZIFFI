@@ -8,8 +8,16 @@
 
 #import "ZCBaseView.h"
 
+
+@protocol ZCLoadMoreCellDelegate <NSObject>
+
+- (void) loadMoreCellView:(UIView *)loadMoreCellView didPressRetrySearch:(id)sender;
+
+@end
+
 @interface ZCLoadMoreCellView : ZCBaseView
-@property (nonatomic, strong) NSString *loaderMessage;
+
+@property (nonatomic, assign) id<ZCLoadMoreCellDelegate> delegate;
 
 - (void) confiureHeaderWithModel:(id)object;
 

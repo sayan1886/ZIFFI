@@ -25,7 +25,7 @@ typedef void(^ZCNetworkManagerProgressBlock) (id progressMessage, CGFloat progre
 
 + (instancetype) defaultNetworkManager;
 
-
+- (void) resetCache;
 - (void) GETfromPath:(NSString *)queryPath withParameters:(NSDictionary *)params success:(ZCNetworkManagerSuccessBlock)success failure:(ZCNetworkManagerFailureBlock) failure;
 
 - (void) POSTtoPath:(NSString *)queryPath withParameters:(NSDictionary *)params success:(ZCNetworkManagerSuccessBlock)success failure:(ZCNetworkManagerFailureBlock) failure;

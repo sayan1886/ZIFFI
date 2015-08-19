@@ -82,9 +82,11 @@
 		1737CE6C1B82A5DB0002AD41 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1737CE5B1B82A5DB0002AD41 /* UIWebView+AFNetworking.m */; };
 		1737CE6F1B82A6700002AD41 /* ZCAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1737CE6E1B82A6700002AD41 /* ZCAppManager.m */; };
 		1737CE771B82A7B00002AD41 /* ZCLoadMoreCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1737CE751B82A7B00002AD41 /* ZCLoadMoreCellView.xib */; };
+		17AEC03A1B8405A00059D3D5 /* ZCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AEC0391B8405A00059D3D5 /* ZCHelper.m */; };
+		17AEC0CE1B848F430059D3D5 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17AEC0CD1B848F430059D3D5 /* placeholder.jpg */; };
+		17AF84A51B84CD9A00AAF7B2 /* reload-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 17AF84A41B84CD9A00AAF7B2 /* reload-icon.png */; };
 		9014ABC11B832C5400A36B87 /* ZCNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9014ABC01B832C5400A36B87 /* ZCNetworkManager.m */; };
 		9014ABD71B834E0900A36B87 /* ZCLoadMoreCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9014ABD61B834E0900A36B87 /* ZCLoadMoreCellView.m */; };
-		9014ABDA1B836C8400A36B87 /* ZCJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9014ABD91B836C8400A36B87 /* ZCJSONModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,7 +127,7 @@
 		1737CDA31B825DE80002AD41 /* ZCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTabBarController.m; sourceTree = "<group>"; };
 		1737CDA51B825E040002AD41 /* ZCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCNavigationController.h; sourceTree = "<group>"; };
 		1737CDA61B825E040002AD41 /* ZCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCNavigationController.m; sourceTree = "<group>"; };
-		1737CDA81B825EB60002AD41 /* ZCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCConstants.h; sourceTree = "<group>"; };
+		1737CDA81B825EB60002AD41 /* ZCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ZCConstants.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		1737CDA91B825ED30002AD41 /* ZCConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCConstants.m; sourceTree = "<group>"; };
 		1737CDAB1B8261440002AD41 /* ZCPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPrefix.pch; sourceTree = "<group>"; };
 		1737CDB01B82752E0002AD41 /* ZCBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCBaseView.h; sourceTree = "<group>"; };
@@ -138,9 +140,9 @@
 		1737CDBC1B827AF80002AD41 /* ZCSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCSearchTableViewCell.h; sourceTree = "<group>"; };
 		1737CDBD1B827AF80002AD41 /* ZCSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCSearchTableViewCell.m; sourceTree = "<group>"; };
 		1737CDBF1B827BD60002AD41 /* ZCSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCSearchCell.h; sourceTree = "<group>"; };
-		1737CDC01B827BD60002AD41 /* ZCSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCSearchCell.m; sourceTree = "<group>"; };
+		1737CDC01B827BD60002AD41 /* ZCSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ZCSearchCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1737CDC31B827C6A0002AD41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = ZIFFI/Base.lproj/ZCSearchCell.xib; sourceTree = SOURCE_ROOT; };
-		1737CDCB1B8291210002AD41 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
+		1737CDCB1B8291210002AD41 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = JSONModel.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		1737CDCC1B8291210002AD41 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
 		1737CDCD1B8291210002AD41 /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelArray.h; sourceTree = "<group>"; };
 		1737CDCE1B8291210002AD41 /* JSONModelArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelArray.m; sourceTree = "<group>"; };
@@ -199,7 +201,7 @@
 		1737CE3D1B82A5DB0002AD41 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		1737CE3E1B82A5DB0002AD41 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
 		1737CE3F1B82A5DB0002AD41 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
-		1737CE401B82A5DB0002AD41 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		1737CE401B82A5DB0002AD41 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AFSecurityPolicy.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1737CE411B82A5DB0002AD41 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
 		1737CE421B82A5DB0002AD41 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
 		1737CE431B82A5DB0002AD41 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
@@ -229,12 +231,14 @@
 		1737CE6D1B82A6700002AD41 /* ZCAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCAppManager.h; sourceTree = "<group>"; };
 		1737CE6E1B82A6700002AD41 /* ZCAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCAppManager.m; sourceTree = "<group>"; };
 		1737CE761B82A7B00002AD41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = ZIFFI/Base.lproj/ZCLoadMoreCellView.xib; sourceTree = SOURCE_ROOT; };
+		17AEC0381B8405A00059D3D5 /* ZCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCHelper.h; sourceTree = "<group>"; };
+		17AEC0391B8405A00059D3D5 /* ZCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCHelper.m; sourceTree = "<group>"; };
+		17AEC0CD1B848F430059D3D5 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
+		17AF84A41B84CD9A00AAF7B2 /* reload-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reload-icon.png"; sourceTree = "<group>"; };
 		9014ABBF1B832C5400A36B87 /* ZCNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCNetworkManager.h; sourceTree = "<group>"; };
 		9014ABC01B832C5400A36B87 /* ZCNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCNetworkManager.m; sourceTree = "<group>"; };
 		9014ABD51B834E0900A36B87 /* ZCLoadMoreCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLoadMoreCellView.h; sourceTree = "<group>"; };
 		9014ABD61B834E0900A36B87 /* ZCLoadMoreCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLoadMoreCellView.m; sourceTree = "<group>"; };
-		9014ABD81B836C8400A36B87 /* ZCJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCJSONModel.h; sourceTree = "<group>"; };
-		9014ABD91B836C8400A36B87 /* ZCJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCJSONModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +357,8 @@
 		1737CD781B8253850002AD41 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				17AEC0381B8405A00059D3D5 /* ZCHelper.h */,
+				17AEC0391B8405A00059D3D5 /* ZCHelper.m */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -377,8 +383,6 @@
 				1737CDF11B8291AD0002AD41 /* ZCSearchMetaModel.m */,
 				1737CDF31B8291DB0002AD41 /* ZCSearchCategoryModel.h */,
 				1737CDF41B8291DB0002AD41 /* ZCSearchCategoryModel.m */,
-				9014ABD81B836C8400A36B87 /* ZCJSONModel.h */,
-				9014ABD91B836C8400A36B87 /* ZCJSONModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -635,6 +639,8 @@
 		1737CDFE1B829A5F0002AD41 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				17AF84A41B84CD9A00AAF7B2 /* reload-icon.png */,
+				17AEC0CD1B848F430059D3D5 /* placeholder.jpg */,
 				1737CE241B82A2B20002AD41 /* TabBarIcons */,
 				1737CDFF1B829A5F0002AD41 /* RatingImage */,
 			);
@@ -820,7 +826,9 @@
 				1737CE341B82A3350002AD41 /* iconReffer.png in Resources */,
 				1737CE181B829CE70002AD41 /* empty.png in Resources */,
 				1737CE2A1B82A2B20002AD41 /* iconHome@2x.png in Resources */,
+				17AEC0CE1B848F430059D3D5 /* placeholder.jpg in Resources */,
 				1737CE1D1B829CE70002AD41 /* full@2x.png in Resources */,
+				17AF84A51B84CD9A00AAF7B2 /* reload-icon.png in Resources */,
 				1737CD5A1B8249E70002AD41 /* Images.xcassets in Resources */,
 				1737CE1C1B829CE70002AD41 /* full.png in Resources */,
 				1737CE771B82A7B00002AD41 /* ZCLoadMoreCellView.xib in Resources */,
@@ -876,6 +884,7 @@
 				1737CD4F1B8249E60002AD41 /* main.m in Sources */,
 				1737CD9E1B825DA70002AD41 /* ZCRefferViewController.m in Sources */,
 				1737CD9B1B825D950002AD41 /* ZCBookingsViewController.m in Sources */,
+				17AEC03A1B8405A00059D3D5 /* ZCHelper.m in Sources */,
 				1737CD811B8253860002AD41 /* ZCAppDelegate.m in Sources */,
 				1737CDE91B8291210002AD41 /* JSONHTTPClient.m in Sources */,
 				1737CDEC1B8291210002AD41 /* JSONValueTransformer.m in Sources */,
@@ -897,7 +906,6 @@
 				1737CDAA1B825ED30002AD41 /* ZCConstants.m in Sources */,
 				1737CE5C1B82A5DB0002AD41 /* AFHTTPRequestOperation.m in Sources */,
 				1737CDBE1B827AF80002AD41 /* ZCSearchTableViewCell.m in Sources */,
-				9014ABDA1B836C8400A36B87 /* ZCJSONModel.m in Sources */,
 				1737CE661B82A5DB0002AD41 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				1737CDE81B8291210002AD41 /* JSONAPI.m in Sources */,
 				1737CDE31B8291210002AD41 /* JSONModel.m in Sources */,
@@ -1055,9 +1063,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Kearns (AX8RKMX9KA)";
 				INFOPLIST_FILE = ZIFFI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9d58a724-3101-48e2-a604-8d4c11a7bfd7";
 			};
 			name = Debug;
 		};
@@ -1065,9 +1075,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniel Kearns (AX8RKMX9KA)";
 				INFOPLIST_FILE = ZIFFI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9d58a724-3101-48e2-a604-8d4c11a7bfd7";
 			};
 			name = Release;
 		};

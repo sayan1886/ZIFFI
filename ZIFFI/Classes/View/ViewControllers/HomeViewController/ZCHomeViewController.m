@@ -10,6 +10,7 @@
 #import "ZCSearchHeaderView.h"
 #import "ZCSearchTableViewCell.h"
 #import "ZCAppManager.h"
+#import "ZCNetworkManager.h"
 
 @interface ZCHomeViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *searchResultView;
@@ -20,23 +21,53 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [[ZCAppManager sharedAppManager] loadSearchDataFromPersistence];
     [self setNavigationTitle:HOME_VIEW_CONTROLLER_NAVIGATION_TITLE];
-    self.datasource = (id<ZCSearchViewControllerDataSource>)[ZCAppManager sharedAppManager];
-    __weak typeof(self) weakSelf = self;
-    [[ZCAppManager sharedAppManager] searchInZiffiWithSearchPhrase:@"" withCompletionHandler:^(id handler) {
-        NSDictionary *completion = (NSDictionary *)handler;
-        if ([[completion objectForKey:@"status"] isEqualToString:@"Success"]) {
-            [[weakSelf searchResultView] reloadData];
-        }
-        else if ([[completion objectForKey:@"status"] isEqualToString:@"Fail"]){
-            ZCLog(@"%@", [completion objectForKey:@"error"]);
-        }
-    }];
+    [self.searchResultView setBackgroundColor:[UIColor clearColor]];
+    [self loadSearchResult];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Search 
+
+- (void) loadSearchResult{
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    self.datasource = (id<ZCSearchViewControllerDataSource>)[ZCAppManager sharedAppManager];
+    __weak typeof(self) weakSelf = self;
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:@"salons-spas" forKey:@"vertical"];
+    [params setValue:@"4" forKey:@"city_id"];
+    [params setValue:@"Hair Spa" forKey:@"q"];
+    [params setValue:[[ZCAppManager sharedAppManager] page] forKey:@"page"];
+    
+    [[ZCAppManager sharedAppManager] searchInZiffiWithSearchParam:params withCompletionHandler:^(id handler) {
+        NSDictionary *completion = (NSDictionary *)handler;
+        if ([[completion objectForKey:@"status"] isEqualToString:@"Success"]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[weakSelf searchResultView] reloadData];
+                [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+            });
+        }
+        else if ([[completion objectForKey:@"status"] isEqualToString:@"Fail"]){
+            ZCLog(@"%@", [completion objectForKey:@"error"]);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[weakSelf searchResultView] reloadData];
+                [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+            });
+        }
+    }];
+    [self.searchResultView reloadData];
+}
+
+#pragma mark - ZCLoadMoreCellDelegate
+
+- (void) loadMoreCellView:(UIView *)loadMoreCellView didPressRetrySearch:(id)sender{
+    [[ZCNetworkManager defaultNetworkManager] resetCache];
+    [self loadSearchResult];
 }
 
 #pragma mark - UITableViewDataSource
@@ -77,6 +108,19 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     return [self.datasource searchViewController:self footerItemForSection:section];
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([indexPath compare:[self lastIndexPath]] == NSOrderedSame) {
+        [self loadSearchResult];
+    }
+}
+
+- (NSIndexPath *) lastIndexPath{
+    NSInteger sectionsAmount = [self.searchResultView numberOfSections];
+    NSInteger rowsAmount = [self.searchResultView numberOfRowsInSection:sectionsAmount-1];
+    NSIndexPath *lastIndexPath = [NSIndexPath indexPathForRow:(rowsAmount - 1) inSection:(sectionsAmount - 1)];
+    return lastIndexPath;
 }
 
 #pragma mark - Memory

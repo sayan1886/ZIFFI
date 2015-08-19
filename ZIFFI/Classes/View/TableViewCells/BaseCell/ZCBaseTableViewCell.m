@@ -12,13 +12,9 @@
 
 - (instancetype) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        NSString *deviceString = @"iPhone";
-        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-            deviceString = @"iPad";
-        }
         self = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil] objectAtIndex:0];
         // observe attendees property
-        [self setValue:NSStringFromClass([self class]) forKey:@"reuseIdentifier"];
+//        [self setValue:NSStringFromClass([self class]) forKey:@"reuseIdentifier"];
     }
     return self;
 }
